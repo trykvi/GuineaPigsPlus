@@ -17,7 +17,7 @@ public class ModEntities {
     public static final RegistryObject<EntityType<GuineaPigEntity>> GUINEA_PIG =
             ENTITY_TYPES.register("guinea_pig", () -> EntityType.Builder.of(GuineaPigEntity::new,
                     MobCategory.CREATURE)
-                    .sized(0.35f, 0.35f).build("guinea_pig"));
+                    .sized(0.8f, 0.6f).build("guinea_pig"));
 
 
     public static void register(IEventBus eventBus){

@@ -41,18 +41,6 @@ public static final AnimationDefinition WALK = AnimationDefinition.Builder.withL
 		new Keyframe(0.6f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR))).build();
 public static final AnimationDefinition STAND-FOUR-TO-TWO = AnimationDefinition.Builder.withLength(0.5f)
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.POSITION, 
-		new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR), 
-		new Keyframe(0.5f, KeyframeAnimations.posVec(0f, 11f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.ROTATION,
-		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR),
-		new Keyframe(0.5f, KeyframeAnimations.degreeVec(-90f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
 .addAnimation("head",
 	new AnimationChannel(AnimationChannel.Targets.ROTATION,
 		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
@@ -94,20 +82,20 @@ public static final AnimationDefinition STAND-FOUR-TO-TWO = AnimationDefinition.
 		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR),
 		new Keyframe(0.5f, KeyframeAnimations.degreeVec(32.5f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(0.5f, KeyframeAnimations.posVec(0f, 11f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.5f, KeyframeAnimations.degreeVec(-90f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR))).build();
 public static final AnimationDefinition STAND-TWO-TO-FOUR = AnimationDefinition.Builder.withLength(0.5f)
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.POSITION, 
-		new Keyframe(0f, KeyframeAnimations.posVec(0f, 11f, 0f),
-			AnimationChannel.Interpolations.LINEAR), 
-		new Keyframe(0.5f, KeyframeAnimations.posVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.ROTATION,
-		new Keyframe(0f, KeyframeAnimations.degreeVec(-90f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR),
-		new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
 .addAnimation("head",
 	new AnimationChannel(AnimationChannel.Targets.ROTATION,
 		new Keyframe(0f, KeyframeAnimations.degreeVec(62.5f, 0f, 0f),
@@ -149,20 +137,20 @@ public static final AnimationDefinition STAND-TWO-TO-FOUR = AnimationDefinition.
 		new Keyframe(0f, KeyframeAnimations.degreeVec(32.5f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR),
 		new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(0f, 11f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(0.5f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(-90f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR))).build();
 public static final AnimationDefinition STAND-TO-SIT = AnimationDefinition.Builder.withLength(0.125f)
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.POSITION, 
-		new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR), 
-		new Keyframe(0.125f, KeyframeAnimations.posVec(0f, -0.5f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.ROTATION,
-		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR),
-		new Keyframe(0.125f, KeyframeAnimations.degreeVec(-5f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
 .addAnimation("head",
 	new AnimationChannel(AnimationChannel.Targets.ROTATION,
 		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
@@ -180,20 +168,20 @@ public static final AnimationDefinition STAND-TO-SIT = AnimationDefinition.Build
 		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR),
 		new Keyframe(0.125f, KeyframeAnimations.degreeVec(7.5f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(0.125f, KeyframeAnimations.posVec(0f, -0.5f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.125f, KeyframeAnimations.degreeVec(-5f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR))).build();
 public static final AnimationDefinition SIT-TO-STAND = AnimationDefinition.Builder.withLength(0.125f)
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.POSITION, 
-		new Keyframe(0f, KeyframeAnimations.posVec(0f, -0.5f, 0f),
-			AnimationChannel.Interpolations.LINEAR), 
-		new Keyframe(0.125f, KeyframeAnimations.posVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
-.addAnimation("guineapig",
-	new AnimationChannel(AnimationChannel.Targets.ROTATION,
-		new Keyframe(0f, KeyframeAnimations.degreeVec(-5f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR),
-		new Keyframe(0.125f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
-			AnimationChannel.Interpolations.LINEAR)))
 .addAnimation("head",
 	new AnimationChannel(AnimationChannel.Targets.ROTATION,
 		new Keyframe(0f, KeyframeAnimations.degreeVec(5f, 0f, 0f),
@@ -209,6 +197,18 @@ public static final AnimationDefinition SIT-TO-STAND = AnimationDefinition.Build
 .addAnimation("front_right_leg",
 	new AnimationChannel(AnimationChannel.Targets.ROTATION,
 		new Keyframe(0f, KeyframeAnimations.degreeVec(7.5f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.125f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(0f, -0.5f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(0.125f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("body",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(-5f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR),
 		new Keyframe(0.125f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
 			AnimationChannel.Interpolations.LINEAR))).build();

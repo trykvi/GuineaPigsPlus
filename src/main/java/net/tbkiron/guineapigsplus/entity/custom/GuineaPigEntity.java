@@ -18,7 +18,6 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -26,7 +25,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.scores.Team;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.tbkiron.guineapigsplus.entity.ModEntities;
@@ -34,7 +32,6 @@ import net.tbkiron.guineapigsplus.entity.variant.GuineaPigVariant;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumSet;
-import java.util.Set;
 
 public class GuineaPigEntity extends TamableAnimal {
 
@@ -171,7 +168,7 @@ public class GuineaPigEntity extends TamableAnimal {
         this.goalSelector.addGoal(11, new RandomLookAroundGoal(this));
     }
 
-    protected void addVariantSpesificGoals(){
+    protected void addVariantSpecificGoals(){
         if(this.getVariant() == GuineaPigVariant.PLUTO){
             this.goalSelector.addGoal(6, new PlutoTemptGoal(this, 0.6D, Ingredient.of(Items.GRASS, Items.GOLDEN_CARROT), true));
         } else {
@@ -186,7 +183,6 @@ public class GuineaPigEntity extends TamableAnimal {
         }
 
         this.goalSelector.removeGoal(this.plutoAvoidPlayersGoal);
-        System.out.println("Doesn't trust" + this.isTrusting() + " " + this.entityData.get(DATA_TRUSTING)+ " " + getTypeVariant());
         if (!this.isTrusting()) {
 
             this.goalSelector.addGoal(4, this.plutoAvoidPlayersGoal);
@@ -423,7 +419,7 @@ public class GuineaPigEntity extends TamableAnimal {
                                         @Nullable CompoundTag tag){
         GuineaPigVariant variant = Util.getRandom(GuineaPigVariant.values(), this.random);
         setVariant(variant);
-        addVariantSpesificGoals();
+        addVariantSpecificGoals();
         return super.finalizeSpawn(slAccessor, difficultyInstance, spawnType, spawnGroupData, tag);
     }
 
@@ -432,13 +428,11 @@ public class GuineaPigEntity extends TamableAnimal {
     }
 
     private int getTypeVariant(){
-        //System.out.println("get: " + this.entityData.get(DATA_ID_TYPE_VARIANT));
         return this.entityData.get(DATA_ID_TYPE_VARIANT);
     }
 
     private void setVariant(GuineaPigVariant variant){
         this.entityData.set(DATA_ID_TYPE_VARIANT, variant.getId() & 255);
-        System.out.println(variant + " " + this.entityData.get(DATA_ID_TYPE_VARIANT));
     }
 
     boolean isTrusting() {
